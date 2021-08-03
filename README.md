@@ -89,28 +89,43 @@ Identified following users with wpscan:
 
  **Flag2**
 - Exploit Used:
-       - Capturing Flag 2: While SSH in as user Michael Flag 2 was also found.
-        - Once again traversing through directories and files as before Flag 2 was found in /var/www next to the html folder that held Flag 1.
-        - Commands:
-            -  `ssh michael@192.168.1.110` 
-            -  `pw: michael`
-            -  `locate *flag* `
-            -  `cat flag2.txt`
+-  Capturing Flag 2: While SSH in as user Michael Flag 2 was also found
+- Flag 2 was found in /var/www
+       - Commands:
+       -  `ssh michael@192.168.1.110` 
+       -  `pw: michael`
+       -  `locate *flag*.txt `
+       -  `cat flag2.txt`
+       
 
 ![Flag 2 location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag2.png "Flag 2 location")
 
 ![Flag 2 cat](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag2cat.png "Flag 2 cat")
 
-- **Flag3: afc01ab56b50591e7dccf93122770cd2**
+- **Accessing MySQL database**
+
+My sql password
+For Mysqlpassword located wp-config.php file.
+
+![wp-config cat](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/Wp-config.png "wp-config")
+
+The MySql password was given in the wp-config.php file.
+
+![Mysql password ](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/Mysqlpasswd.png "Mysql password")
+
+Accessed the Mysql database using the following command:
+ 
+ `mysql -u root -p wordpress`
+ 
+  Used password `R2v3nSecurity`
+ 
+![Mysql login ](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/mysqllogin.png "Mysql login")
+
+- **Flag3**
 - Exploit Used:
-    - Same exploits used to gain Flag 1 and 2.
-    - Capturing Flag 3: Accessing MySQL database.
-        - Once having found wp-config.php and gaining access to the database credentials as Michael, MySQL was used to explore the database.
+        - Capturing Flag 3: Accessing MySQL database.
         - Flag 3 was found in wp_posts table in the wordpress database.
         - Commands:
-            - `mysql -u root -p’R@v3nSecurity’ -h 127.0.0.1` 
-            - `show databases;`
-            - `use wordpress;` 
             - `show tables;`
             - `select * from wp_posts;`
 
