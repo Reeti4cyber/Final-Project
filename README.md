@@ -117,19 +117,28 @@ Accessed the Mysql database using the following command:
  
  `mysql -u root -p wordpress`
  
-  Used password `R2v3nSecurity`
+  Used password `R@v3nSecurity`
  
 ![Mysql login ](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/mysqllogin.png "Mysql login")
 
 - **Flag3**
 - Exploit Used:
-        - Capturing Flag 3: Accessing MySQL database.
-        - Flag 3 was found in wp_posts table in the wordpress database.
-        - Commands:
-            - `show tables;`
-            - `select * from wp_posts;`
+        - Capturing Flag 3: 
+             - Flag 3 was found in wp_posts table in the wordpress database.
+             - Commands:
+                     - `show tables;`
+                     - `select * from wp_posts;`
 
-![Flag 3 location](/Images/flag3-location.png "Flag 3 location")
+![tables ](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/tables.png "tables")
+
+
+![Flag 3 flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag3flag4.png "Flag 3 flag4")
+
+Got hashed passwords of both the users `Michael` and `Steven` from the users table.
+
+- `select * from wp_users;`
+
+![Users](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/userstable.png "Users")
 
 - **Flag4: 715dea6c055b9fe3337544932f2941ce**
 - Exploit Used:
