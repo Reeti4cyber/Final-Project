@@ -58,10 +58,10 @@ This scan identifies the services below as potential points of entry:
  ![wpscan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/wpscan.png "wpscan results")
 
 Identified following users with wpscan:
-  - Steven
-  - Michael
+  - - Steven
+  - - Michael
   
- - ![users results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/users.png "users results")
+  ![users results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/users.png "users results")
 
 - SSH to gain access to user shell.
 
@@ -80,10 +80,12 @@ Identified following users with wpscan:
     - Flag 1 found in var/www/html folder at root in service.html in a HTML comment below the footer.
     - Commands:
         - `cd var/www/html`
-        - grep -rl 'flag1'
+        -  grep -rl 'flag1'
         - `nano service.html`
 
 ![Flag 1 location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag1grep.png "Flag 1 location")
+
+![Flag 1](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag1.png "Flag 1")
 
 - **Flag2: fc3fd58dcdad9ab23faca6e9a3e581c**
 - Exploit Used:
