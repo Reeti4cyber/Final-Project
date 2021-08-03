@@ -47,38 +47,35 @@ This scan identifies the services below as potential points of entry:
 5. Port 445/TCP 	Open 	netbios-ssn
 
 
-The following vulnerabilities were  identified on each target:
-
-**Target 1**
-1. User Enumeration (WordPress site)
-2. Weak User Password
-3. Unsalted User Password Hash (WordPress database)
-4. Misconfiguration of User Privileges/Privilege Escalation
-
 ### Explotation
-The Red Team was able to penetrate Target 1 and retrieve the following confidential data:
-
-**Target 1**
-- **Flag1: b9bbcb33ellb80be759c4e844862482d**
-
-
 
 **wpscan**
 - Exploit Used:
     - Enumerating WordPress site: WPScan to enumerate users of the Target 1 WordPress site
     - Command: 
             - ``` wpscan --url http://192.168.1.110/wordpress --enumerate u ```
+            
  ![wpscan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/wpscan.png "wpscan results")
 
 Identified following users with wpscan:
   - Steven
   - Michael
-  ![users results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/users.png "users results")
+  
+ - ![users results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/users.png "users results")
 
-- Targeting user Michael
-    - Small manual Brute Force attack to guess/finds Michael’s password
+- SSH to gain access to user shell.
+
+    - Brute Force attack to guess/finds Michael’s password
     - User password was weak and obvious
     - Password: michael
+     
+     - Command: 
+            - ``` ssh michael@192.168.1.110 ```
+            
+ ![michaelssh results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/michaelssh.png "michaelssh results")
+
+    
+    
 - Capturing Flag 1: SSH in as Michael traversing through directories and files.
     - Flag 1 found in var/www/html folder at root in service.html in a HTML comment below the footer.
     - Commands:
@@ -158,6 +155,12 @@ Identified following users with wpscan:
 
 ![Flag 4 location](/Images/flag4-location.png "Flag 4 location")
 
+The following vulnerabilities were  identified on each target:
 
+**Target 1**
+1. User Enumeration (WordPress site)
+2. Weak User Password
+3. Unsalted User Password Hash (WordPress database)
+4. Misconfiguration of User Privileges/Privilege Escalation
 
 
