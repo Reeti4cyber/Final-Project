@@ -29,13 +29,13 @@ This scan identified the following machines and the corresponding IP addresses:
 | 192.168.1.115 | Target 2, Raven 2 |
 
 ### Exposed Services
-Nmap scan results for each machine reveal the below services and OS details:
+Nmap scan results for each machine revealed the below services and OS details:
 
 Command: `$ nmap -sV 192.168.1.110`
 
 Output Screenshot:
 
-![Nmap scan results](/Images/nmap-scan-results.png "Nmap scan results")
+![Nmap scan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/nmap.png "Nmap scan results")
 
 This scan identifies the services below as potential points of entry:
 
