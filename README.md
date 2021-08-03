@@ -35,7 +35,7 @@ Command: `$ nmap -sV 192.168.1.110`
 
 Output Screenshot:
 
-![Nmap scan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/nmap.png "Nmap scan results")
+![Nmap scan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/nmaptarget1.png "Nmap scan results")
 
 This scan identifies the services below as potential points of entry:
 
