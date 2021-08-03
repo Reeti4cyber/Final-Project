@@ -79,15 +79,11 @@ Identified following users with wpscan:
 - Capturing Flag 1: SSH in as Michael traversing through directories and files.
     - Flag 1 found in var/www/html folder at root in service.html in a HTML comment below the footer.
     - Commands:
-        - `ssh michael@192.168.1.110`
-        - `pw: michael`
-        - `cd ../`
-        - `cd ../`
         - `cd var/www/html`
-        - `ls -l`
+        - grep -rl 'flag1'
         - `nano service.html`
 
-![Flag 1 location](/Images/flag1-location.png "Flag 1 location")
+![Flag 1 location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag1grep.png "Flag 1 location")
 
 - **Flag2: fc3fd58dcdad9ab23faca6e9a3e581c**
 - Exploit Used:
