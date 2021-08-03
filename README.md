@@ -87,23 +87,19 @@ Identified following users with wpscan:
 
 ![Flag 1](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag1.png "Flag 1")
 
-- **Flag2: fc3fd58dcdad9ab23faca6e9a3e581c**
+- **Flag2**
 - Exploit Used:
-    - Same exploit used to gain Flag 1.
-    - Capturing Flag 2: While SSH in as user Michael Flag 2 was also found.
+       - Capturing Flag 2: While SSH in as user Michael Flag 2 was also found.
         - Once again traversing through directories and files as before Flag 2 was found in /var/www next to the html folder that held Flag 1.
         - Commands:
             - `ssh michael@192.168.1.110` 
             - `pw: michael`
-            - `cd ../` 
-            - `cd ../`
-            - `cd var/www`
-            - `ls -l`
+            - `locate *flag* `
             - `cat flag2.txt`
 
-![Flag 2 location](/Images/flag2-location.png "Flag 2 location")
+![Flag 2 location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/Images/flag2.png "Flag 2 location")
 
-![Flag 2 cat](/Images/flag2-cat.png "Flag 2 cat")
+![Flag 2 cat](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/Images/flag2cat.png "Flag 2 cat")
 
 - **Flag3: afc01ab56b50591e7dccf93122770cd2**
 - Exploit Used:
