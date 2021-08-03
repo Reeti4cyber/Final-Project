@@ -46,11 +46,6 @@ This scan identifies the services below as potential points of entry:
 4. Port 139/TCP 	Open 	netbios-ssn
 5. Port 445/TCP 	Open 	netbios-ssn
 
-### Enumerating WordPress site
-
-**wpscan**
-``` wpscan --url http://192.168.1.110/wordpress --enumerate u ```
- ![wpscan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/wpscan.png "wpscan results")
 
 The following vulnerabilities were  identified on each target:
 
@@ -65,12 +60,20 @@ The Red Team was able to penetrate Target 1 and retrieve the following confident
 
 **Target 1**
 - **Flag1: b9bbcb33ellb80be759c4e844862482d**
-- Exploit Used:
-    - WPScan to enumerate users of the Target 1 WordPress site
-    - Command: 
-        - `$ wpscan --url http://192.168.1.110 --enumerate u`
 
-![WPScan results](/Images/nmap-scan-results.png "WPScan results")
+
+
+**wpscan**
+- Exploit Used:
+    - Enumerating WordPress site: WPScan to enumerate users of the Target 1 WordPress site
+    - Command: 
+            - ``` wpscan --url http://192.168.1.110/wordpress --enumerate u ```
+ ![wpscan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/wpscan.png "wpscan results")
+
+Identified following users with wpscan:
+  - Steven
+  - Michael
+  ![users results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/users.png "users results")
 
 - Targeting user Michael
     - Small manual Brute Force attack to guess/finds Michael’s password
