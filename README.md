@@ -31,7 +31,7 @@ This scan identified the following machines and the corresponding IP addresses:
 ### Exposed Services
 Nmap scan results for each machine revealed the below services and OS details:
 
-Command: `$ nmap -sV 192.168.1.110`
+Command: `$ nmap -sV -v -p- 192.168.1.110`
 
 Output Screenshot:
 
@@ -46,8 +46,13 @@ This scan identifies the services below as potential points of entry:
 4. Port 139/TCP 	Open 	netbios-ssn
 5. Port 445/TCP 	Open 	netbios-ssn
 
-### Critical Vulnerabilities
-The following vulnerabilities were identified on each target:
+### Enumerating WordPress site
+
+**wpscan**
+``` wpscan --url http://192.168.1.110/wordpress --enumerate u ```
+ ![wpscan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/wpscan.png "wpscan results")
+
+The following vulnerabilities were  identified on each target:
 
 **Target 1**
 1. User Enumeration (WordPress site)
