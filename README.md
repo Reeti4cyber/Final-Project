@@ -277,14 +277,14 @@ The PHPMailer exploit is fairly straightforward. CVE-2016-10045 describes the de
 
      - ` python -c 'import pty;pty.spawn("/bin/bash")' `
      -  `su root`
-     - `passwd:toor'
+     - `passwd:toor`
     
    ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag4target2.png "flag4")    
     
     Got root access to traget to, via directory traversal accessed the flag 4.
     
     ** Flag4 **
-    - 'cat flag4.txt`
+    - `cat flag4.txt`
     
     ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/catflag4.png "flag4")    
     
