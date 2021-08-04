@@ -279,7 +279,7 @@ The PHPMailer exploit is fairly straightforward. CVE-2016-10045 describes the de
      -  `su root`
      - `passwd:toor`
     
-   ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag4target2.png "flag4")    
+   ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/Flag4target2.png "flag4")    
     
     Got root access to traget to, via directory traversal accessed the flag 4.
     
