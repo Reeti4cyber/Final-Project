@@ -1,5 +1,5 @@
 # Final-Project
-# Read Team: Summary of Operations
+# Red Team: Summary of Operations
 
 
 ### Network Scan
