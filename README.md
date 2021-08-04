@@ -255,7 +255,8 @@ Command: `find /var/www -type f -iname 'flag*' `
 ![flag3](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag3command.png "flag3")     
 
 Opened the flag in the browser window.
-http://192.168.1.115/wordpress/wp-content/uploads/2018/11/flag3.png.
+`http://192.168.1.115/wordpress/wp-content/uploads/2018/11/flag3.png`
+   
     **Flag3**
     
   ![flag3](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag3target2.png "flag3")     
