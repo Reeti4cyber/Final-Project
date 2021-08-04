@@ -59,8 +59,8 @@ This scan identifies the services below as potential points of entry:
  ![wpscan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/wpscan.png "wpscan results")
 
 Identified following users with wpscan:
-  - - Steven
-  - - Michael
+   - Steven
+   - Michael
   
   ![users results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/users.png "users results")
 
@@ -170,7 +170,7 @@ Once escalated to root
            - `cat flag4.txt`
 
 - **Flag4: 715dea6c055b9fe3337544932f2941ce**
-- 
+
 
        
 ![Flag 4 location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag4.png "Flag 4")
