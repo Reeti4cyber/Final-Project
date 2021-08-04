@@ -224,7 +224,7 @@ Edited the line at the top of the exploit.sh script to set the `TARGET`variable.
 
 Ran the script. It uploaded a file called backdoor.php to the target server. This file was used to execute command injection attack by opening an Ncat connection to the Kali VM.
 
-![exploit](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/exploit.png "exploit")   
+![exploit](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/exploitsh.png "exploit")   
 
 
 
