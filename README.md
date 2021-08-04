@@ -289,7 +289,8 @@ The PHPMailer exploit is fairly straightforward. CVE-2016-10045 describes the de
     
     cat flag4.txt
     
-    ![catflag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/catflag4.png "catflag4")    
+   
+     ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/catflag4.png "flag4")  
     
     
     
