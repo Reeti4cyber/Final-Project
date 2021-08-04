@@ -281,10 +281,12 @@ The PHPMailer exploit is fairly straightforward. CVE-2016-10045 describes the de
     
    ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/Flag4target2.png "flag4")    
     
-    Got root access to traget to, via directory traversal accessed the flag 4.
     
-    ** Flag4 **
-    - `cat flag4.txt`
+    Got root access to traget to, via directory traversal accessed the flag 4
+    
+    **Flag4**
+    
+    `cat flag4.txt`
     
     ![catflag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/catflag4.png "catflag4")    
     
