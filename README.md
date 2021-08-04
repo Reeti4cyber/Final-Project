@@ -267,9 +267,10 @@ Used Metasploit options for a successful attack against phpmailer.
 Got a meterpreter shell from the vulnerable machine.
 The PHPMailer exploit is fairly straightforward. CVE-2016-10045 describes the details of the vulnerability. 
 
-    ![msfconsole](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/msfconsole.png "msfconsole")   
+   
+   ![msfconsole](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/msfconsole.png "msfconsole")   
     
-    Used option 1 and got access to the mailer.
+   Used option 1 and got access to the mailer.
     
  ![mailer](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/mailer.png "mailer")   
     
@@ -286,7 +287,7 @@ The PHPMailer exploit is fairly straightforward. CVE-2016-10045 describes the de
     
     **Flag4**
     
-    `cat flag4.txt`
+    cat flag4.txt
     
     ![catflag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/catflag4.png "catflag4")    
     
