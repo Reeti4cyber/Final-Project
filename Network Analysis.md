@@ -65,7 +65,6 @@ Exported the file to  Kali machine's desktop.
   - Initial HTTP Request made from `172.16.4.205` to `205.185.216.10`
   - This request downloaded malware to the machine at `172.16.4.205`
 
-4. As a bonus, retrieve the desktop background of the Windows host.
 
 ---
 ## Illegal Downloads
@@ -74,7 +73,13 @@ Exported the file to  Kali machine's desktop.
     - MAC address: `00:16:17:18:66:c8`
     - Windows username: `elmer.blanco`
     - OS version: `Windows 10 NT 10.0`
+ 
+ ![usernameBlanco](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/UsernameBlanco.png)
+
 
 2. Which torrent file did the user download?
     - `Betty_Boop_Rhythm_on_the_Reservation.avi`
+
+![torrent](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/TorrentBlanco.png)
+
 
