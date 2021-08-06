@@ -6,7 +6,9 @@ Inspect the traffic captured,  their IP addresses were somewhere in the range 10
 1. What is the domain name of the users' custom site?
   - `frank-n-ted.com`
   
-  ![domainname](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/TimeThieves.png)
+  ![domainname](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/TimethievesDNS.png)
+  
+  
 2. What is the IP address of the Domain Controller (DC) of the AD network?
   - `10.6.12.12` (`Frank-n-Ted-DC.frank-n-ted.com`)
 3. What is the name of the malware downloaded to the 10.6.12.203 machine?
