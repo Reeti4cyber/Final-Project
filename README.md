@@ -267,9 +267,10 @@ Used Metasploit options for a successful attack against phpmailer.
 Got a meterpreter shell from the vulnerable machine.
 The PHPMailer exploit is fairly straightforward. CVE-2016-10045 describes the details of the vulnerability. 
 
-    ![msfconsole](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/msfconsole.png "msfconsole")   
+   
+   ![msfconsole](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/msfconsole.png "msfconsole")   
     
-    Used option 1 and got access to the mailer.
+   Used option 1 and got access to the mailer.
     
  ![mailer](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/mailer.png "mailer")   
     
@@ -277,16 +278,19 @@ The PHPMailer exploit is fairly straightforward. CVE-2016-10045 describes the de
 
      - ` python -c 'import pty;pty.spawn("/bin/bash")' `
      -  `su root`
-     - `passwd:toor'
+     - `passwd:toor`
     
-   ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag4target2.png "flag4")    
+   ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/Flag4target2.png "flag4")    
     
-    Got root access to traget to, via directory traversal accessed the flag 4.
     
-    ** Flag4 **
-    - 'cat flag4.txt`
+    Got root access to traget to, via directory traversal accessed the flag 4
     
-    ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/catflag4.png "flag4")    
+    **Flag4**
+    
+    cat flag4.txt
+    
+   
+   ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/catflag4.png)  
     
     
     
