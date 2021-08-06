@@ -54,7 +54,12 @@ Exported the file to  Kali machine's desktop.
      
 
 2. What is the username of the Windows user whose computer is infected?
+
+  - ``Kerberos.CNameString && ip.src==172.16.4.205``
+  
   - `matthijs.devries`
+
+ ![username](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/UsernameVWM.png)
 
 3. What are the IP addresses used in the actual infection traffic?
   - Initial HTTP Request made from `172.16.4.205` to `205.185.216.10`
