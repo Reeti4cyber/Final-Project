@@ -14,7 +14,7 @@ Inspect the traffic captured,  their IP addresses were somewhere in the range 10
 3. What is the name of the malware downloaded to the 10.6.12.203 machine?
   - `june11.dll`
 
-![malware](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/TimethievesGET.png)
+![malware](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/TimeThievesGET.png)
 
 5. What kind of malware is this classified as?
   - Trojan
