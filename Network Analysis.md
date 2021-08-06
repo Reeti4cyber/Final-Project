@@ -20,14 +20,15 @@ Exported the file to  Kali machine's desktop.
 
 - ` Clicked on the packet that displays malware  --> File --> ExportObjects --> HTTP--> june11.dll `
 
- ![exportmalware](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/JuneDLL1.png)
+ ![exportmalware](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/JuneDLL2.png)
  
-  ![exportmalware](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/JuneDLL2.png)
+  ![exportmalware](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/JuneDLL1.png)
  
  
 
 4. Uploaded the file to VirusTotal.com.
 
+ ![virustotal](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/VirusTotal.png)
 
 6. What kind of malware is this classified as?
 
