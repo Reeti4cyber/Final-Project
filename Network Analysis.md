@@ -16,7 +16,13 @@ Inspect the traffic captured,  their IP addresses were somewhere in the range 10
 
 ![malware](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/TimeThievesGET.png)
 
+Exported the file to  Kali machine's desktop.
+
+- `<b> Clicked on the packet that displays malware  --> File --> ExportObjects --> HTTP--> june11.dll <b>`
+
+4. Uploaded the file to VirusTotal.com.
 5. What kind of malware is this classified as?
+
   - Trojan
 
 ---
