@@ -38,10 +38,20 @@ Exported the file to  Kali machine's desktop.
 
 ## Vulnerable Windows Machine
 
+- Machines in the network live in the range 172.16.4.0/24.
+- The domain mind-hammer.net is associated with the infected computer.
+- The DC for this network lives at 172.16.4.4 and is named Mind-Hammer-DC.
+- The network has standard gateway and broadcast addresses.
+
 1. Find the following information about the infected Windows machine:
     - Host name: `Rotterdam-PC.mindhammer.net`
     - IP address: `172.16.4.205`
     - MAC address: `00:59:07:b0:63:a4`
+     
+     ![rotterdam](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/VWM1.png)
+     
+     ![rotterdam](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/VWM2.png)
+     
 
 2. What is the username of the Windows user whose computer is infected?
   - `matthijs.devries`
