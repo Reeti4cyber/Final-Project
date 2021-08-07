@@ -10,6 +10,8 @@
 ### Network Topology
 The following machines were identified on the network:
 
+![netdiscover](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/netdiscover.png "netdiscover")
+
 **Kali**
 - Operating System: 
     - Debian Kali 5.4.0
@@ -17,6 +19,14 @@ The following machines were identified on the network:
     - The Penetration Tester
 - IP Address: 
     - 192.168.1.90
+
+**Hypervisor**
+- Operating System: 
+    - Microsoft Windows
+- Purpose: 
+    - Hypervisor/Gateway
+- IP Address: 
+    - 192.168.1.1
 
 **ELK**
 - Operating System: 
@@ -67,7 +77,7 @@ This scan identifies the services below as potential points of entry:
 - Port 22/TCP 	Open 	SSH	OpenSSH 6.7p1 Debian 5+deb8u4
 - Port 80/TCP 	Open 	HTTP	Apache httpd 2.4.10 (Debian)
 
-![Nmap Target 1 Ports](/Images/nmap-target1-ports.png "Nmap Target 1 Ports")
+![Nmap Target 1 Ports](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/nmaptarget1.png "Nmap Target 1 Ports")
 
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
 
