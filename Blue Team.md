@@ -120,7 +120,7 @@ CPU Usage Monitor is implemented as follows:
 - Reliability: 
     - The alert is highly reliable. Even if there isn’t a malicious program running this can still help determine where to improve on CPU usage.
 
-![CPU Usage Monitor alert logs](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/CPUsageMonitor.png "CPU Usage Monitor alert logs")
+![CPU Usage Monitor alert logs](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/CPUUsageMonitor.png "CPU Usage Monitor alert logs")
 
 ### Suggestions for Going Further
 **Suggest a patch for each vulnerability identified by the alerts above.** Remember: alerts only detect malicious behavior. They do not prevent it. It is not necessary to explain how to implement each patch.
