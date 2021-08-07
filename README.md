@@ -59,8 +59,8 @@ This scan identifies the services below as potential points of entry:
  ![wpscan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/wpscan.png "wpscan results")
 
 Identified following users with wpscan:
-   - Steven
-   - Michael
+   - **Steven
+   - **Michael
   
   ![users results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/users.png "users results")
 
@@ -177,13 +177,14 @@ Once escalated to root
 
 The following vulnerabilities were  identified on target1:
 
-**Target 1**
+**Target 1 Vulnerabilities**
 1. User Enumeration (WordPress site)
 2. Weak User Password
 3. Unsalted User Password Hash (WordPress database)
 4. Misconfiguration of User Privileges/Privilege Escalation
 
-### Target2
+---
+## Target2
 Target 2's IP Address: `192.168.1.115`
 
 Enumerated the web server with nikto.
