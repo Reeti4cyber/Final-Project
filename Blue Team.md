@@ -86,7 +86,7 @@ Excessive HTTP Errors is implemented as follows:
 - Reliability: 
     - The alert is highly reliable. Measuring by error codes 400 and above will filter out any normal or successful responses. 400+ codes are client and server errors which are of more concern. Especially when taking into account these error codes going off at a high rate.
 
-![Excessive HTTP Errors alert logs](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/ExcessiveHTTPErorrs.png "Excessive HTTP Errors alert logs")
+![Excessive HTTP Errors alert logs](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/ExcessiveHTTPErrors.png "Excessive HTTP Errors alert logs")
 
 **HTTP Request Size Monitor**
 
