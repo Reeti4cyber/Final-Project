@@ -86,7 +86,7 @@ Excessive HTTP Errors is implemented as follows:
 - Reliability: 
     - The alert is highly reliable. Measuring by error codes 400 and above will filter out any normal or successful responses. 400+ codes are client and server errors which are of more concern. Especially when taking into account these error codes going off at a high rate.
 
-![Excessive HTTP Errors alert logs](/Images/excessive-http-error-logs.png "Excessive HTTP Errors alert logs")
+![Excessive HTTP Errors alert logs](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/ExcessiveHTTPErorrs.png "Excessive HTTP Errors alert logs")
 
 **HTTP Request Size Monitor**
 
@@ -103,7 +103,7 @@ HTTP Request Size Monitor is implemented as follows:
 - Reliability:
     - Alert could create false positives. It comes in at a medium reliability. There is a possibility for a large non malicious HTTP request or legitimate HTTP traffic.
 
-![HTTP Request Size Monitor alert logs](/Images/http-request-size-monitor-logs.png "HTTP Request Size Monitor alert logs")
+![HTTP Request Size Monitor alert logs](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/HTTPRequestSizeMonitor.png "HTTP Request Size Monitor alert logs")
 
 **CPU Usage Monitor**
 
@@ -120,7 +120,7 @@ CPU Usage Monitor is implemented as follows:
 - Reliability: 
     - The alert is highly reliable. Even if there isn’t a malicious program running this can still help determine where to improve on CPU usage.
 
-![CPU Usage Monitor alert logs](/Images/cpu-usage-monitor-logs.png "CPU Usage Monitor alert logs")
+![CPU Usage Monitor alert logs](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/CPUsageMonitor.png "CPU Usage Monitor alert logs")
 
 ### Suggestions for Going Further
 **Suggest a patch for each vulnerability identified by the alerts above.** Remember: alerts only detect malicious behavior. They do not prevent it. It is not necessary to explain how to implement each patch.
