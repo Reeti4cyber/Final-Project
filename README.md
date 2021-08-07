@@ -59,8 +59,8 @@ This scan identifies the services below as potential points of entry:
  ![wpscan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/wpscan.png "wpscan results")
 
 Identified following users with wpscan:
-   - **Steven
-   - **Michael
+   - **Steven**
+   - **Michael**
   
   ![users results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/users.png "users results")
 
@@ -90,13 +90,13 @@ Identified following users with wpscan:
 
  **Flag2**
 - Exploit Used:
--  Capturing Flag 2: While SSH in as user Michael Flag 2 was also found
-- Flag 2 was found in /var/www
-       - Commands:
-       -  `ssh michael@192.168.1.110` 
-       -  `pw: michael`
-       -  `locate *flag*.txt `
-       -  `cat flag2.txt`
+          - Capturing Flag 2: While SSH in as user Michael Flag 2 was also found
+          - Flag 2 was found in `/var/www`
+- Commands:
+           -  `ssh michael@192.168.1.110` 
+           -  `pw: michael`
+           -  `locate *flag*.txt `
+           -  `cat flag2.txt`
        
 
 ![Flag 2 location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag2.png "Flag 2 location")
@@ -106,7 +106,7 @@ Identified following users with wpscan:
 - **Accessing MySQL database**
 
 My sql password
-For Mysqlpassword located wp-config.php file.
+For Mysqlpassword located ```wp-config.php``` file.
 
 ![wp-config cat](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/Wp-config.png "wp-config")
 
@@ -116,19 +116,19 @@ The MySql password was given in the wp-config.php file.
 
 Accessed the Mysql database using the following command:
  
-- `mysql -u root -p wordpress`
+- ```mysql -u root -p wordpress```
  
--  Used password `R@v3nSecurity`
+-  Used password ``R@v3nSecurity``
  
 ![Mysql login ](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/mysqllogin.png "Mysql login")
 
 - **Flag3**
-        - Exploit Used:
-        - Capturing Flag 3: 
-             - Flag 3 was found in wp_posts table in the wordpress database.
-             - Commands:
-                     - `show tables;`
-                     - `select * from wp_posts;`
+         - Exploit Used:
+               - Capturing Flag 3: 
+                       - Flag 3 was found in wp_posts table in the wordpress database.
+               - Commands:
+                     - ```show tables;```
+                     - ```select * from wp_posts;```
 
 ![tables ](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/tables.png "tables")
 
@@ -137,7 +137,7 @@ Accessed the Mysql database using the following command:
 
 Got hashed passwords of both the users `Michael` and `Steven` from the users table.
 
-- `select * from wp_users;`
+- ```select * from wp_users;```
 
 ![Users](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/userstable.png "Users")
 
@@ -145,11 +145,11 @@ Created a wp_hashes.txt with Steven and Michael's hashes,cracked the password ha
 
 On the Kali local machine the wp_hashes.txt was run against John the Ripper to crack the hashes. 
             - Command:
-                - `john wp_hashes.txt`
+                - ```john wp_hashes.txt```
 
 ![john](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/john.png "john")
 
-Secured a user `Steven` shell as the user whose password cracked as `pink84`.
+Secured a user ``Steven`` shell as the user whose password cracked as ``pink84``.
 
 
 
