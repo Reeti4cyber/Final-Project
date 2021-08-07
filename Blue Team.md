@@ -22,7 +22,7 @@ The following machines were identified on the network:
 - Operating System: 
     - Ubuntu 18.04
 - Purpose: 
-    - The ELK (Elasticsearch and Kibana) Stack
+    - The ELK (Elasticsearch, Logstash and Kibana) Stack
 - IP Address: 
     - 192.168.1.100
 
@@ -33,6 +33,14 @@ The following machines were identified on the network:
     - The WordPress Host
 - IP Address: 
     - 192.168.1.110
+    
+**Target 2**
+- Operating System: 
+    - Debian GNU/Linux 8
+- Purpose: 
+    - HTTP server
+- IP Address: 
+    - 192.168.1.115
 
 **Capstone**
 - Operating System: 
@@ -48,7 +56,7 @@ The following machines were identified on the network:
 
 ### Description of Targets
 
-- Two VMs on the network were vulnerable to attack: Target 1 (192.168.1.110) and Target 2 (192.168.1.115). However, only Target 1 is covered and was attacked.
+- Two VMs on the network were vulnerable to attack: Target 1 (192.168.1.110) and Target 2 (192.168.1.115). 
 
 - Each VM functions as an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers.
 
