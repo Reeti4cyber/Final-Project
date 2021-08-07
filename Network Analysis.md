@@ -73,6 +73,8 @@ Exported the file to  Kali machine's desktop.
     - MAC address: `00:16:17:18:66:c8`
     - Windows username: `elmer.blanco`
     - OS version: `Windows 10 NT 10.0`
+
+![elmerblanco](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/elmerblanco.jpg)
  
  ![usernameBlanco](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/UsernameBlanco.png)
 
