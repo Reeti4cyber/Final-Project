@@ -8,6 +8,7 @@
 - Suggestions for Going Further
 
 ### Network Topology
+ 
 The following machines were identified on the network:
 
 ![netdiscover](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/netdiscover.png "netdiscover")
@@ -62,7 +63,8 @@ The following machines were identified on the network:
 
 **Network Diagram:**
 
-![Network Diagram](/Images/final-project-network-diagram.png "Network Diagram")
+![Network Diagram](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/NetworkDiagram.png "NetworkDiagram")
+  
 
 ### Description of Targets
 
