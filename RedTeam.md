@@ -61,6 +61,7 @@ This scan identifies the services below as potential points of entry:
 
 
 ### Explotation
+Since Target 1 is a webserver hosting a WordPress site. Used `wpscan` which is a WordPress vulnerability scanner, a penetration testing tool used to scan for vulnerabilities on WordPress-powered websites. 
 
 **wpscan**
 - Exploit Used:
