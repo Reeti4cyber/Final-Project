@@ -16,10 +16,12 @@ Output Screenshot:
 
 ![Netdiscover scan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/netdiscover.png "Netdiscover scan results")
 
+
+#### nmap subnet
+
+`nmap 192.168.1.0/24`
+
 ![nmapsubnet](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/nmapsubnet.png "nmapsubnet")
-
-![image](https://user-images.githubusercontent.com/84610195/128650464-35a62229-d785-4867-a963-ae8d4b650562.png)
-
 
 #### Description of Targets
 
@@ -34,6 +36,8 @@ This scan identified the following machines and the corresponding IP addresses:
 | 192.168.1.105 | ELK server  |
 | 192.168.1.110 | Target 1, Raven 1 |
 | 192.168.1.115 | Target 2, Raven 2 |
+| 192.168.1.90 | Kali, Pentester|
+
 
 ### Target1
 
@@ -60,7 +64,7 @@ This scan identifies the services below as potential points of entry:
 
 **wpscan**
 - Exploit Used:
-    - Enumerating WordPress site: WPScan to enumerate users of the Target 1 WordPress site
+    - Enumerated WordPress site: WPScan to enumerate users of the Target 1 WordPress site
     - Command: 
             - ``` wpscan --url http://192.168.1.110/wordpress --enumerate u ```
             
