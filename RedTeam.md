@@ -16,6 +16,9 @@ Output Screenshot:
 
 ![Netdiscover scan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/netdiscover.png "Netdiscover scan results")
 
+![image](https://user-images.githubusercontent.com/84610195/128650464-35a62229-d785-4867-a963-ae8d4b650562.png)
+
+
 #### Description of Targets
 
 - Two VMs on the network were vulnerable to attack: `Target 1 (192.168.1.110) and Target 2 (192.168.1.115)`
