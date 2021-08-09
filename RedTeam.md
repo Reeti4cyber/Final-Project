@@ -16,6 +16,8 @@ Output Screenshot:
 
 ![Netdiscover scan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/netdiscover.png "Netdiscover scan results")
 
+![nmapsubnet](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/nmapsubnet.png "nmapsubnet)
+
 ![image](https://user-images.githubusercontent.com/84610195/128650464-35a62229-d785-4867-a963-ae8d4b650562.png)
 
 
