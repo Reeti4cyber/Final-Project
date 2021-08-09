@@ -206,16 +206,22 @@ Nikto is a web server scanner which performs vulnerability scanning against web 
 
  `nikto -C all -h 192.168.1.115`
  
+ Nikto revealed that the Directory Indexing was enabled on the web server (OSVDB 3268)
+ 
 This created a list of URLs the Target HTTP server exposes. This server is running Apache Server.
+
 
 ![nikto location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/nikto.png "nikto")
 
 Performed a more in-depth enumeration with gobuster.
 
 Installed gobuster using apt 
+
  - `apt-get install gobuster`
 
 ![Gobuster install](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/gobusterinstall.png "gobusterinstall")
+
+Scanned the website (-u http://192.168.1.115/) for directories using a wordlist (-w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt) :
 
  - `gobuster -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt dir -u “http://192.168.1.115” `
 
