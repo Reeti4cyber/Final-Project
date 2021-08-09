@@ -202,6 +202,8 @@ Target 2's IP Address: `192.168.1.115`
 
 Enumerated the web server with nikto.
 
+Nikto is a web server scanner which performs vulnerability scanning against web servers for multiple items including dangerous files and programs, and checks for outdated versions of web server software. It also checks for server configuration errors and any possible vulnerabilities they might have introduced.
+
  `nikto -C all -h 192.168.1.115`
  
 This created a list of URLs the Target HTTP server exposes. This server is running Apache Server.
