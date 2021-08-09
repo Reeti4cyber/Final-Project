@@ -10,6 +10,8 @@
 ### Network Topology
 The following machines were identified on the network:
 
+![netdiscover](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/netdiscover.png "netdiscover")
+
 **Kali**
 - Operating System: 
     - Debian Kali 5.4.0
@@ -17,6 +19,14 @@ The following machines were identified on the network:
     - The Penetration Tester
 - IP Address: 
     - 192.168.1.90
+
+**Hypervisor**
+- Operating System: 
+    - Microsoft Windows
+- Purpose: 
+    - Hypervisor/Gateway
+- IP Address: 
+    - 192.168.1.1
 
 **ELK**
 - Operating System: 
@@ -67,7 +77,7 @@ This scan identifies the services below as potential points of entry:
 - Port 22/TCP 	Open 	SSH	OpenSSH 6.7p1 Debian 5+deb8u4
 - Port 80/TCP 	Open 	HTTP	Apache httpd 2.4.10 (Debian)
 
-![Nmap Target 1 Ports](/Images/nmap-target1-ports.png "Nmap Target 1 Ports")
+![Nmap Target 1 Ports](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/nmaptarget1.png "Nmap Target 1 Ports")
 
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
 
@@ -86,7 +96,7 @@ Excessive HTTP Errors is implemented as follows:
 - Reliability: 
     - The alert is highly reliable. Measuring by error codes 400 and above will filter out any normal or successful responses. 400+ codes are client and server errors which are of more concern. Especially when taking into account these error codes going off at a high rate.
 
-![Excessive HTTP Errors alert logs](/Images/excessive-http-error-logs.png "Excessive HTTP Errors alert logs")
+![Excessive HTTP Errors alert logs](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/ExcessiveHTTPErrors.png "Excessive HTTP Errors alert logs")
 
 **HTTP Request Size Monitor**
 
@@ -103,7 +113,7 @@ HTTP Request Size Monitor is implemented as follows:
 - Reliability:
     - Alert could create false positives. It comes in at a medium reliability. There is a possibility for a large non malicious HTTP request or legitimate HTTP traffic.
 
-![HTTP Request Size Monitor alert logs](/Images/http-request-size-monitor-logs.png "HTTP Request Size Monitor alert logs")
+![HTTP Request Size Monitor alert logs](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/HTTPRequestSizeMonitor.png "HTTP Request Size Monitor alert logs")
 
 **CPU Usage Monitor**
 
@@ -120,7 +130,7 @@ CPU Usage Monitor is implemented as follows:
 - Reliability: 
     - The alert is highly reliable. Even if there isn’t a malicious program running this can still help determine where to improve on CPU usage.
 
-![CPU Usage Monitor alert logs](/Images/cpu-usage-monitor-logs.png "CPU Usage Monitor alert logs")
+![CPU Usage Monitor alert logs](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/CPUUsageMonitor.png "CPU Usage Monitor alert logs")
 
 ### Suggestions for Going Further
 **Suggest a patch for each vulnerability identified by the alerts above.** Remember: alerts only detect malicious behavior. They do not prevent it. It is not necessary to explain how to implement each patch.
