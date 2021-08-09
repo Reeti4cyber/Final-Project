@@ -9,7 +9,7 @@
 
 ### Network Topology
 
-  ####NetworkDiagram
+<h6>Network Diagram</h6>
   
  ![NetworkDiagram](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/NetworkDiagram.png "NetworkDiagram")
   
