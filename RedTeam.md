@@ -1,6 +1,9 @@
 # Final-Project
 # Red Team: Summary of Operations
 
+## Network Diagram
+
+![NetworkDiagram](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/NetworkDiagram.png )
 
 ### Network Scan
 #### netdiscover
