@@ -8,6 +8,9 @@
 ### Network Scan
 #### netdiscover
 
+Netdiscover is a simple ARP scanner which can be used to scan for live hosts in a network.
+The netdiscover gathers all the important information about the network. It gathers information about the connected clients and the router. It tells the IP, MAC address and the operating system of the connected clients.
+
 Scanned the network to find the Subnet using netdiscover and IP of the Target 1
 
 `netdiscover`
@@ -18,6 +21,8 @@ Output Screenshot:
 
 
 #### nmap subnet
+
+Nmap is short for Network Mapper. It is an open-source Linux command-line tool that is used to scan IP addresses and ports in a network and to detect installed applications. Nmap finds which devices are running on the network, discover open ports and services, and detect vulnerabilities.
 
 `nmap 192.168.1.0/24`
 
@@ -61,6 +66,7 @@ This scan identifies the services below as potential points of entry:
 
 
 ### Explotation
+
 Since Target 1 is a webserver hosting a WordPress site. Used `wpscan` which is a WordPress vulnerability scanner, a penetration testing tool used to scan for vulnerabilities on WordPress-powered websites. 
 
 **wpscan**
@@ -76,15 +82,20 @@ Identified following users with wpscan:
    - **Michael**
   
   ![users results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/users.png "users results")
+  
+ - Brute force user's password using hydra.
+ 
+ Hydra is an open-source tool that allows us to perform various kinds of brute force attacks using wordlists.
+ 
+ ``$ hydra -l michael -P /usr/share/wordlists/rockyou.txt -s 22 -f -vV 192.168.1.110 ssh``
 
 - SSH to gain access to user shell.
 
     - Brute Force attack to guess/finds Michael’s password
-    - User password was weak and obvious
-    - Password: michael
+          - Password: michael
      
-     - Command: 
-            - ``` ssh michael@192.168.1.110 ```
+    - Command: 
+             - ``` ssh michael@192.168.1.110 ```
             
  ![michaelssh results](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/michaelssh.png "michaelssh results")
 
@@ -93,9 +104,9 @@ Identified following users with wpscan:
 - Capturing Flag 1: SSH in as Michael traversing through directories and files.
     - Flag 1 found in var/www/html folder at root in service.html in a HTML comment below the footer.
     - Commands:
-        - `cd var/www/html`
-        - `grep -rl 'flag1`
-        - `nano service.html`
+          - `cd var/www/html`
+          - `grep -rl 'flag1`
+          - `nano service.html`
 
 ![Flag 1 location](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/flag1grep.png "Flag 1 location")
 
@@ -191,10 +202,13 @@ Once escalated to root
 The following vulnerabilities were  identified on target1:
 
 **Target 1 Vulnerabilities**
-1. User Enumeration (WordPress site)
+1. Open port 22
 2. Weak User Password
-3. Unsalted User Password Hash (WordPress database)
-4. Misconfiguration of User Privileges/Privilege Escalation
+3. Directory Browsing 
+4. wp_config.php hack
+5. Mysql database revealed
+6. Unsalted User Password Hash (WordPress database)
+7. Misconfiguration of User Privileges/Privilege Escalation
 
 ---
 ## Target2
@@ -313,6 +327,7 @@ Opened the flag in the browser window.
    
    ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/catflag4.png)  
     
+    [Offensive Analysis of a Vulnerable network](https://docs.google.com/presentation/d/1wsYigHq6z70rpho4xjhpJgIZODBL7Pcv5vIXuY4_NYU/edit?usp=sharing)
     
     
     
