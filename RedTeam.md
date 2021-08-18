@@ -327,7 +327,7 @@ Opened the flag in the browser window.
    
    ![flag4](https://github.com/Reeti4cyber/Final-Project/blob/main/Images/catflag4.png)  
         
-    ![Offensive Analysis of a Vulnerable network](https://docs.google.com/presentation/d/1wsYigHq6z70rpho4xjhpJgIZODBL7Pcv5vIXuY4_NYU/edit?usp=sharing)
+   ![Offensive Analysis of a Vulnerable network](https://docs.google.com/presentation/d/1wsYigHq6z70rpho4xjhpJgIZODBL7Pcv5vIXuY4_NYU/edit?usp=sharing)
     
     
     
